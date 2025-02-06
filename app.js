@@ -6,7 +6,7 @@ if(userAmount >= 500){
 
 
 var height = parseFloat( prompt("Enter your Height by unit Foot and inch"))
-var weight = parseFloat( prompt("Enter You Weight"))
+var weight = parseFloat( prompt("Enter You Weight (KG)"))
 
 var height = (height * 0.3048 ) * (height * 0.3048 );
 var bmi =  weight / height;
