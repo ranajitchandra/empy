@@ -28,16 +28,16 @@ else{
 var num = parseInt(prompt("Enter your Exam Result number"));
 
 if(num >= 90 && num <= 100){
-    document.write("<h1>A grade</h1>");
+    document.write("<h1>Your result is A grade</h1>");
 }
 else if(num >= 80 && num  < 90){
-    document.write("<h1>B grade</h1>");
+    document.write("<h1>Your result is B grade</h1>");
 }
 else if(num >=70 && num < 80){
-    document.write("<h1>C grade</h1>");
+    document.write("<h1>Your result is C grade</h1>");
 }
 else if(num >= 60 && num < 70){
-    document.write("<h1>D grade</h1>");
+    document.write("<h1>Your result is D grade</h1>");
 }
 else{
     document.write("<h1>oh! You Are Fail</h1>")
@@ -45,7 +45,7 @@ else{
 
 
 
-var num1 = parseInt(prompt("First Number"));
-var num2 = parseInt(prompt("Second Number"));
+var num1 = parseInt(prompt("First compare Number"));
+var num2 = parseInt(prompt("Second compare Number"));
 
-num > num2 ? document.write(`<h1>--${num1*num1}</h1>`) : document.write(`<h1>${num1+num2}</h1>`);
+num > num2 ? document.write(`<h1>Huge Bonus---${num1*num1}</h1>`) : document.write(`<h1> Double Bonus---${num1+num2}</h1>`);
