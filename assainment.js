@@ -1,28 +1,51 @@
 console.clear()
 
 
-function cashOut(money) {
+function cashOut(money){
     if(0 > money || typeof (money) !== "number"){
-        return "Invalid"
+        return "Invalid";
     }else{
-        return money * 1.75/100
+        return money * 1.75/100;
     }
 }
 
-function validEmail(email) {
-    email.toLowerCase()
+function validEmail(email){
+    email.toLowerCase();
     if(typeof (email) === "string"){
         if(email.split('@').length - 1 !== 1 || email.includes("@") === !true || email.includes("-") || email.includes(" ") || email.startsWith(".") || email.startsWith("-") || email.startsWith("_") || email.startsWith("+") || email.startsWith("@") || email.endsWith(".com") === !true){
-            return false
+            return false;
         }else{
-            return true
+            return true;
         }
     }else{
-        return "Invalid"
+        return "Invalid";
     }
 }
 
 
 
 
+function  electionResult(votes){
+    if(Array.isArray(votes)){
+        let mango = [];
+        let banana = [];
+        for(let i= 0; i <votes.length; i++){
+            if(votes[i] === "mango"){
+                mango.push(votes[i]);
+            }
+            if(votes[i] === "banana"){
+                banana.push(votes[i]);
+            }
+        }
+        if(mango.length === banana.length){
+            return "Draw";
+        }else if(mango.length > banana.length){
+            return "Mango";
+        }else{
+            return "Banana";
+        }
+    }else{
+        return "Invalid";
+    }
+}
 
