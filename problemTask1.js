@@ -83,7 +83,6 @@ console.clear()
 // sample-output: Programming
 
 // let arrStr = "I am learning Programming to become a programmer";
-
 // function findLongestWord(str){
 //     let arrStr = str.split(" "); // making array
 //     let getLongestWord = arrStr[0];
@@ -104,5 +103,33 @@ console.clear()
 // Generate a random number between 10 to 20.
 
 // console.log( Math.floor( Math.random() * 10 ) + 10 )
+
+
+
+
+function neutralize(str1, str2) {
+    let result = "";
+    for (let i = 0; i < str1.length; i++) {
+        if (str1[i] === str2[i]) {
+            // result += str1[i]; // Keep the same sign if they are the same?
+            result = result + str1[i]; // Keep the same sign if they are the 
+            console.log(result)
+        } else {
+            result += "0"; // Neutralize if they are different
+        }
+    }
+    return result;
+}
+
+// Example usage:
+console.log(neutralize("+-++-", "--++-")); // Output: "0-++-"
+// console.log(neutralize("++++", "----"));   // Output: "0000"
+// console.log(neutralize("+-+-", "+-+-"));   // Output: "0000"
+// console.log(neutralize("++--", "++--"));   // Output: "++--"
+
+
+
+
+
 
 
