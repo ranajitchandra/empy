@@ -48,19 +48,17 @@ const lists = document.querySelector("#list-item")
 lists.addEventListener("click", function(e){
     // console.log(e.target.parentNode)
     // console.log(e.target.childNodes)
-    console.log(e.target.tagName)
+    
+    console.dir(e.target)
+    
     if(e.target.tagName == "LI"){
         e.target.parentNode.removeChild(e.target)
     }
 })
 
-
 const btn = document.querySelector("#add")
-
 btn.addEventListener("click", function(e){
-    
     // console.log(document.createElement("li").innerText="HI");
-
     const olParentList = document.getElementById("list-item");
 
     const inputText = document.getElementById("input-txt");
@@ -74,8 +72,14 @@ btn.addEventListener("click", function(e){
 })
 
 
+// dom_________________________________________
 
-
-
+document.getElementById("input-quit").addEventListener("keyup", function(e){
+    if(e.target.value == "Quit"){
+        document.getElementById("quit").removeAttribute("disabled")
+    }else{
+        document.getElementById("quit").setAttribute("disabled", true)
+    }
+})
 
 
