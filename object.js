@@ -187,38 +187,46 @@ console.clear();
 
 
 // reverse string and array
-let name2 = "Ranajit is my name"; 
-let reverseStr = "";
-let reverseStr2 = "";
-let reverseStr3 = name2.split("").reverse().join("")
-let reverseStr4 = "";
-let reverseStr5 = [];
-for(n of name2){
-    reverseStr = n + reverseStr;
-}
-for(i = 0; i < name2.length; i++){
-    reverseStr2 =  name2[i] + reverseStr2;
-}
-for(i = name2.length -1; i >= 0; i--){
-    reverseStr4 =reverseStr4 + name2[i];
-    reverseStr5.push(name2[i]);
-    console.log(name2[i])
-}
-console.log(reverseStr)
-console.log(reverseStr2)
-console.log(reverseStr3)
-console.log(reverseStr4)
-console.log(reverseStr5.join(""))
+// let name2 = "Ranajit is my name"; 
+// let reverseStr = "";
+// let reverseStr2 = "";
+// let reverseStr3 = name2.split("").reverse().join("")
+// let reverseStr4 = "";
+// let reverseStr5 = [];
+// for(n of name2){
+//     reverseStr = n + reverseStr;
+// }
+// for(i = 0; i < name2.length; i++){
+//     reverseStr2 =  name2[i] + reverseStr2;
+// }
+// for(i = name2.length -1; i >= 0; i--){
+//     reverseStr4 =reverseStr4 + name2[i];
+//     reverseStr5.push(name2[i]);
+//     console.log(name2[i])
+// }
+// console.log(reverseStr)
+// console.log(reverseStr2)
+// console.log(reverseStr3)
+// console.log(reverseStr4)
+// console.log(reverseStr5.join(""))
 
 
 // ++++++++++Practice++++++++++++++++++++++++++++++++++++++++++
 
 
+let arr = [100, 99, 119, 300]
+console.log()
+let sum = 0;
+for(i of arr){
+    // console.log(i)
+    sum+=i
+}
 
-
-
-
-
+// console.log(sum % 10000000)
+// console.log(sum / 3600)
+// console.log(sum / 60) 
+console.log(100 / 60) 
+console.log(100 % 60) 
 
 
 
