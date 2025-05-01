@@ -83,3 +83,44 @@ document.getElementById("input-quit").addEventListener("keyup", function(e){
 })
 
 
+
+
+
+
+// dom_________________________________________
+
+
+
+let photoDom = document.querySelector(".tech-photo")
+photoDom.addEventListener("click", function(e){
+    // console.dir(e.target.classList.remove("ddd"))
+    // console.dir(e.target.classList.add("myBP"))
+    // console.dir(e.target.src)
+    // console.dir(e.target.id)
+
+})  
+
+
+
+
+
+let b = document.querySelectorAll(".btn")
+    for(i = 0; i<b.length; i++){
+        b[i].addEventListener("click", function(e){
+            for(j = 0; j<b.length; j++){
+                b[j].classList.remove("btn2")
+                console.log(b[j], "__ j",j)
+                // console.log(b[j].cloneNode(true), "__ j", j);
+                e.target.classList.add("btn2")
+            }
+        })
+    }
+
+
+
+
+
+
+
+
+

@@ -18,21 +18,22 @@ console.clear();
 
 // For this object below add a property named passenger capacity with value 5 using loop and condition
 
-// let obj = {
-//     name : "Ranajit",
-//     "serial": 179494,
-// }
-// obj["color"] = "red"
-// obj["passenger capacity"] = ["Hi", "hello"] 
-// obj["passenger capacity"][0] =123;
-// obj["passenger capacity"].push({color : "red", brand : "poco", price: 30000})
-// for(let p of obj["passenger capacity"]){
-//    if(typeof(p) == "object"){
-//         for(let item in p){
-//             console.log(p[item])
-//         }
-//    }
-// }
+let obj = {
+    name : "Ranajit",
+    "serial": 123,
+}
+obj["color"] = "red"
+obj["passenger capacity"] = ["Hi", "hello"] 
+obj["passenger capacity"][0] =123;
+obj["passenger capacity"].push({color : "red", brand : "poco", price: 30000})
+for(let p of obj["passenger capacity"]){
+   if(typeof(p) == "object"){
+        for(let item in p){
+            console.log(p[item]) // dot notation problem
+            // console.log(item) // dot notation problem
+        }
+   }
+}
 // console.log(obj)
 
 
@@ -214,19 +215,19 @@ console.clear();
 // ++++++++++Practice++++++++++++++++++++++++++++++++++++++++++
 
 
-let arr = [100, 99, 119, 300]
-console.log()
-let sum = 0;
-for(i of arr){
-    // console.log(i)
-    sum+=i
-}
+// let arr = [100, 99, 119, 300]
+// console.log()
+// let sum = 0;
+// for(i of arr){
+//     // console.log(i)
+//     sum+=i
+// }
 
-// console.log(sum % 10000000)
-// console.log(sum / 3600)
-// console.log(sum / 60) 
-console.log(100 / 60) 
-console.log(100 % 60) 
+// // console.log(sum % 10000000)
+// // console.log(sum / 3600)
+// // console.log(sum / 60) 
+// console.log(100 / 60) 
+// console.log(100 % 60) 
 
 
 
