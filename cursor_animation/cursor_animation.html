@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Trail + Drops</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: #f9f9f9;
+    }
+
+    .plus {
+      position: absolute;
+      color: rgb(230, 1, 219);
+      font-size: 24px;
+      font-weight: bold;
+      user-select: none;
+      pointer-events: none;
+      animation: fall 1s ease-out forwards;
+    }
+
+    @keyframes fall {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const plus = document.createElement('div');
+      plus.className = 'plus';
+      plus.textContent = '+';
+      plus.style.left = e.clientX + 'px';
+      plus.style.top = e.clientY + 'px';
+
+      document.body.appendChild(plus);
+
+      // Remove after animation completes
+      setTimeout(() => {
+        plus.remove();
+      }, 1000); // match the animation duration
+    });
+  </script>
+
+</body>
+</html>

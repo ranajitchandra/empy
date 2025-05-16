@@ -1,0 +1,50 @@
+document.getElementById("login").addEventListener("click", (event) => {
+    event.preventDefault();
+    handleLogin();
+});
+
+function handleLogin() {
+    const userNameInput = document.getElementById("userName");
+    const userPinInput = document.getElementById("userPin");
+
+    const uName = userNameInput.value.trim();
+    const uPin = userPinInput.value.trim();
+
+    if (!validateInputs(uName, uPin)) return;
+
+    updateUI();
+
+    userNameInput.value = "";
+    userPinInput.value = "";
+
+    console.log(uName);
+}
+
+function validateInputs(username, pin) {
+    if (!username) {
+        alert("Username Field is Empty");
+        return false;
+    }
+    if (pin.length !== 6) {
+        alert("You must enter six digits.");
+        return false;
+    }
+    if (Number(pin) !== 123456) {
+        return false;
+    }
+    return true;
+}
+
+function updateUI() {
+    const elementsToShow = ["header", "learn", "content-card", "faq"];
+    elementsToShow.forEach(id => document.getElementById(id).classList.remove("hidden"));
+
+    document.getElementById("hero").classList.add("hidden");
+}
+
+
+
+
+
+
+

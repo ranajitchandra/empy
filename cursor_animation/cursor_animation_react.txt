@@ -1,0 +1,62 @@
+
+
+
+// it is for react
+
+ // css
+ 
+  .plus {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    animation: fall 1s ease-out forwards;
+  }
+  
+  @keyframes fall {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100px) scale(0.5);
+    }
+  }
+  
+
+
+// component 
+
+
+import React, { useEffect } from 'react';
+
+const PlusTrail = () => {
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const plus = document.createElement('div');
+      plus.className = 'plus';
+      plus.textContent = '+';
+      plus.style.left = `${e.pageX}px`;
+      plus.style.top = `${e.pageY}px`;
+      document.body.appendChild(plus);
+
+      setTimeout(() => {
+        plus.remove();
+      }, 1000);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  return null;
+};
+
+export default PlusTrail;
+
+

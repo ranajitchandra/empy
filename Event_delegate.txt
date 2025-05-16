@@ -1,0 +1,31 @@
+const lists = document.getElementById("list-item");
+
+// Event listener for removing a clicked list item
+lists.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
+        e.target.remove(); // Remove only the clicked <li> item
+    }
+});
+
+const btn = document.querySelector("#add");
+
+// Event listener for adding a new list item
+btn.addEventListener("click", function () {
+    const olParentList = document.getElementById("list-item");
+    const inputText = document.getElementById("input-txt");
+
+    const trimmedValue = inputText.value.trim(); // Trim to remove leading/trailing spaces
+
+    if (trimmedValue === "") {
+        alert("Please enter a valid item!"); // Prevent adding empty items
+        return;
+    }
+
+    const createEl = document.createElement("li");
+    createEl.classList.add("list");
+    createEl.innerText = trimmedValue.toUpperCase();
+    createEl.id = `item-${olParentList.children.length + 1}`; // Assign unique ID
+    olParentList.appendChild(createEl);
+
+    inputText.value = ""; // Clear input field after adding
+});

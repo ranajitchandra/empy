@@ -1,0 +1,54 @@
+const sumA = sum();
+const sumB = sum();
+// let memorySUMB;
+// function sumB (a) {
+//     b = b + a;
+//     return b;
+//   };
+//let memoryB;
+// function sumA (a) {
+//     b = b + a;
+//     return b;
+//   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function sum() {
+  let b = 0;
+
+  return function (a) {
+    b = b + a;
+    return b;
+  };
+}
+
+const sumA = sum();
+const sumB = sum();
+// let memorySUMB;
+// function sumB (a) {
+//     b = b + a;
+//     return b;
+//   };
+//let memoryB;
+// function sumA (a) {
+//     b = b + a;
+//     return b;
+//   };

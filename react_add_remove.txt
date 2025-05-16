@@ -1,0 +1,57 @@
+import React, { useState } from 'react';
+
+const ItemManager = () => {
+  const initialItems = ['Item 1', 'Item 2', 'Item 3'];
+
+  const [addedItems, setAddedItems] = useState([]);
+  const [disabledButtons, setDisabledButtons] = useState({});
+
+  const handleAddItem = (item) => {
+    setAddedItems((prev) => [...prev, item]);
+    setDisabledButtons((prev) => ({ ...prev, [item]: true }));
+  };
+
+  const handleRemoveItem = (item) => {
+    setAddedItems((prev) => prev.filter((i) => i !== item));
+    setDisabledButtons((prev) => ({ ...prev, [item]: false }));
+  };
+  console.log(addedItems, "add")
+  console.log(disabledButtons, "Remove")
+  return (
+    <div style={{ display: 'flex', gap: '50px' }}>
+      {/* Available Items with Add Button */}
+      <div>
+        <h3>Available Items</h3>
+        {initialItems.map((item) => (
+          <div key={item} style={{ marginBottom: '10px' }}>
+            {item}
+            <button onClick={() => handleAddItem(item)} disabled={disabledButtons[item]}
+            > Add</button>
+          </div>
+        ))}
+      </div>
+
+      <div>
+        <h3>Selected Items</h3>
+        {addedItems.map((item) => (
+          <div key={item} style={{ marginBottom: '10px' }}>
+            {item}
+            <button
+              onClick={() => handleRemoveItem(item)}
+              style={{ marginLeft: '10px' }}
+            >
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ItemManager;
+
+
+
+
+
